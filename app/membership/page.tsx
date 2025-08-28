@@ -66,10 +66,11 @@ export default function MembershipPage() {
           </h3>
 
           {/* Description text */}
-          <p className="text-[#ff4d14] text-[16px] sm:text-[18px] font-light tracking-wide leading-7 mb-10 max-w-full">
+          <p className="text-[#ff4d14] text-[14px] sm:text-[16px] font-light tracking-wide leading-6 mb-10 max-w-full">
             Learn the 6-month nervous system reset that eases the constant pressure in your body.  <br />
             The MAHA Method weaves Kriya, Breathwork, Meditation & Movement — for the woman ready to finally feel like herself again.
           </p>
+
 
           {/* Centered button */}
           <div className="flex justify-center lg:justify-start mb-16">
@@ -99,18 +100,27 @@ export default function MembershipPage() {
       <section className="relative w-full bg-[#b0ad9c]">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
           
+          {/* Image Content */}
+          <div className="relative order-1 lg:order-2 w-full">
+            <img
+              src="/images/member-aless.jpg"
+              alt="Alessandra in a yoga pose on the beach"
+              className="w-full h-64 sm:h-80 md:h-96 lg:h-full object-contain lg:object-cover"
+            />
+          </div>
+
           {/* Text Content */}
-          <div className="bg-[#b0ad9c] flex justify-center items-start order-1 lg:order-1 py-6 sm:py-8 lg:py-12">
+          <div className="bg-[#b0ad9c] flex justify-start items-start order-2 lg:order-1 py-4 sm:py-6 lg:py-12">
             <div className="px-4 sm:px-8 lg:pl-16">
-              <h2 className="text-sm font-baskervville text-left text-[#f2ede8] tracking-wider mb-8">
+              <h2 className="text-sm font-baskervville text-left text-[#f2ede8] tracking-wider mb-6">
                 I see you,
               </h2>
               <div className="text-[#f2ede8] font-libre">
-                <p className="font-baskervville text-sm text-left text-[#f2ede8] leading-7 lg:leading-9 tracking-wide mb-6">
+                <p className="font-baskervville text-sm text-left text-[#f2ede8] leading-7 lg:leading-9 tracking-wide mb-4">
                   On paper, you’re doing everything right.<br/>
                   You journal. You meditate. You go to breathwork classes, listen to the podcasts, tick all the boxes. But inside? You feel like a stranger in your own skin.
                 </p>
-                <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 leading-7 tracking-wider space-y-4">
+                <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 leading-7 tracking-wider space-y-3">
                   <li>You put everyone else first, then collapse into bed wondering why there’s nothing left for you.</li>
                   <li>You smile, you scroll, you say yes when you mean no… and then replay it later, disgusted at yourself for staying silent.</li>
                   <li>You snap at the people you love, then spiral into shame “who even am I anymore?”</li>
@@ -121,17 +131,10 @@ export default function MembershipPage() {
             </div>
           </div>
 
-          {/* Image Content */}
-          <div className="relative order-2 lg:order-2 w-full">
-            <img
-              src="/images/member-aless.jpg"
-              alt="Alessandra in a yoga pose on the beach"
-              className="w-full h-auto lg:h-full object-cover"
-            />
-          </div>
-          
         </div>
       </section>
+
+
 
 
 
