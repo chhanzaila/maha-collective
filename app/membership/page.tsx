@@ -51,11 +51,12 @@ export default function MembershipPage() {
         </div>
       )}
 
-      {/* Hero Section */}
-    <section className="relative px-4 sm:px-8 md:px-16 lg:px-28 bg-[#d9d6c7] flex flex-col lg:flex-row justify-between items-center min-h-[75vh] py-12 lg:py-20">
-      <div className="flex flex-col w-full lg:w-1/2 text-center">
+    {/* Hero Section */}
+    <section className="relative px-4 sm:px-8 md:px-16 lg:px-28 bg-[#d9d6c7] flex flex-col justify-center min-h-[75vh] py-12 lg:py-20">
+
+      <div className="flex flex-col w-full text-center lg:text-left relative">
         {/* Hero Heading */}
-        <h2 className="text-[#fffbf5] text-4xl sm:text-5xl md:text-6xl font-baskervville font-bold mb-4">
+        <h2 className="text-[#ff4d14] text-4xl sm:text-5xl md:text-6xl font-baskervville font-bold mb-4">
           MAHA <i>Collective waitlist.</i>
         </h2>
         
@@ -65,13 +66,14 @@ export default function MembershipPage() {
         </h3>
 
         {/* Description text */}
-        <p className="text-[#ff4d14] text-[16px] sm:text-[18px] font-light tracking-wide leading-6 mb-10">
-          Learn the 6-month nervous system reset that eases the constant pressure in your body. 
+        <p className="text-[#ff4d14] text-[16px] sm:text-[18px] font-light tracking-wide leading-7 mb-10 max-w-full">
+          Learn the 6-month nervous system reset that eases the constant pressure in your body.  <br />
           The MAHA Method weaves Kriya, Breathwork, Meditation & Movement — for the woman ready to finally feel like herself again.
         </p>
+
         
         {/* Centered button */}
-        <div className="flex justify-center">
+        <div className="flex justify-center lg:justify-start mb-16">
           <button 
             onClick={openFlodeskForm}
             className="bg-transparent border hover:bg-[#ff4d14] hover:text-white border-[#ff4d14] text-[#ff4d14] px-16 py-4 text-sm sm:text-md rounded-md uppercase transition-all duration-300"
@@ -79,13 +81,21 @@ export default function MembershipPage() {
             JOIN OUR WAITLIST
           </button>
         </div>
+
+        {/* Crown Image at bottom-right */}
+        <img 
+          src="/member-crown.svg" 
+          alt="Member Crown" 
+          className="absolute bottom-0 right-0 w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32"
+        />
+        
       </div>
 
-      {/* Image */}
-      <div className="mt-12 lg:mt-0 lg:ml-12 flex justify-center">
-        <img src="/member-crown.svg" alt="Member Crown" className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32" />
-      </div>
     </section>
+
+
+
+
 
 
 
@@ -121,9 +131,14 @@ export default function MembershipPage() {
 
       
 
+
+
+
       {/* Story Section */}
       <section className="relative w-full bg-[#b0ad9c]">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
+          
+          {/* Text Content */}
           <div className="bg-[#b0ad9c] flex justify-center items-center order-2 lg:order-1 py-12 sm:py-16 lg:py-24">
             <div className="px-4 sm:px-8 lg:pl-16">
               <h2 className="text-sm font-baskervville text-left text-[#f2ede8] tracking-wider mb-8">
@@ -131,40 +146,35 @@ export default function MembershipPage() {
               </h2>
               <div className="text-[#f2ede8] font-libre">
                 <p className="font-baskervville text-sm text-left text-[#f2ede8] leading-7 lg:leading-9 tracking-wide mb-6">
-                  You’re doing everything you think you're supposed to.
+                  On paper, you’re doing everything right.<br/>
+                  You journal. You meditate. You go to breathwork classes, listen to the podcasts, tick all the boxes. But inside? You feel like a stranger in your own skin.
                 </p>
-                <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 leading-7 tracking-wider">
-                  <li>You dump your thoughts into a journal every night, hoping if you write fast enough, your brain might finally shut up.</li>
-                  <li>You force yourself to do morning pages, because some girl on Instagram said it would “clear your head”… but your head still feels like a browser with 37 tabs open.</li>
-                  <li>You play a five-minute meditation before bed because TikTok swears it’ll stop the 2am spirals BUT you're still lying there, wide-eyed, calculating how many hours of sleep you might get.</li>
-                  <li>Lying awake in bed at 2am <i>OVERTHINKING</i> that one conversion at work.</li>
-                  <li>Smiling out the outside while quietly <i>CRUMBLING</i> inside.</li>
-                  <li>Getting 8 hours of sleep and waking up with a tight chest and ANXIETY.</li>
-                </ul>
-
-                <p className="mt-8 font-baskervville text-sm text-left text-[#f2ede8] leading-7 lg:leading-9 tracking-wide">
-                  Something still feels off....
-                </p>
-                <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 leading-7 tracking-wider">
-                  <li>You’re snapping at the people you love, then crying in the bathroom because “wtf is wrong with me?”</li>
-                  <li>You’re wide awake at 2am, stuck on that one thing you said, like it ruined everything and now you have to move cities and change your name.</li>
-                  <li>You keep achieving; hitting the goals, getting the praise, but your nervous system is too busy scanning for the next failure to actually let you enjoy any of it.</li>
-                  <li>You’ve tried the breathwork, the podcasts, the healing girl starter pack, and you’re still stuck in the same loop.</li>
+                <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 leading-7 tracking-wider space-y-4">
+                  <li>You put everyone else first, then collapse into bed wondering why there’s nothing left for you.</li>
+                  <li>You smile, you scroll, you say yes when you mean no… and then replay it later, disgusted at yourself for staying silent.</li>
+                  <li>You snap at the people you love, then spiral into shame “who even am I anymore?”</li>
+                  <li>Every decision you make gets run by five other people, and still, you doubt your answer.</li>
+                  <li>Life is happening to you. And you can’t remember the last time you actually felt alive.</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div className="relative order-1 lg:order-2">
+          {/* Image Content */}
+          <div className="relative order-1 lg:order-2 w-full">
             <img
               src="/images/member-aless.jpg"
               alt="Alessandra in a yoga pose on the beach"
-              className="w-full h-auto max-h-screen object-contain lg:object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
+          
         </div>
       </section>
 
+
+
+ 
 
 
       {/* Story Section */}
@@ -237,9 +247,6 @@ export default function MembershipPage() {
             <h2 className="text-[#ff4d14] text-3xl">
               MAHA is the <i>reset</i> your body’s been begging for.<br/>The kind that doesn’t just quiet the noise, it clears the <i>whole</i> system.
             </h2>
-            <p className="mt-8 font-baskervville text-sm text-[#ff4d14] tracking-wide">
-              Rooted in ancient yogic wisdom. Backed by modern neuroscience. Designed for the women who’s not just chasing success, she’s craving depth.
-            </p>
           </div>
         </div>
       </section>
@@ -247,30 +254,29 @@ export default function MembershipPage() {
       {/* Daily System Section */}
       <section className="relative w-full bg-[#b0ad9c]">
         <div className="grid grid-cols-1 lg:grid-cols-3">
+          
+          {/* Text Content */}
           <div className="bg-[#b0ad9c] flex flex-col justify-center items-center order-2 lg:order-1 py-12 sm:py-16 lg:py-24 col-span-1 lg:col-span-2">
             <div className="px-8 sm:px-12 lg:pl-16 w-full lg:w-auto">
               <h2 className="text-xl font-baskervville text-left text-[#fffbf5] mb-2 tracking-wider leading-8">
-                A proven daily system of Kriya, Breathwork, Movement & Meditation to help you feel like <i>you</i> again. 
+                A proven daily system of Kriya, Breathwork, Movement & Meditation to help you feel like <i>you</i> again.
               </h2>
-              <h3 className="text-sm font-light text-[#fffbf5] font-baskervville mt-6">
-                This isn’t another self-help hack.
-              </h3>
-              <p className="font-baskervville text-sm text-left text-[#fffbf5] mb-2 leading-7 lg:leading-9 tracking-wide mt-6">
+              <p className="font-baskervville text-sm text-left text-[#fffbf5] mb-4 leading-7 tracking-wide mt-6">
                 MAHA 21 has been carefully designed to:
               </p>
-              <div className="font-baskervville text-sm text-left font-light leading-8 tracking-wider">
-                <p>Month 1: Release stagnancy & heaviness → ground into steady calm</p>
-                <p>Month 2: Ignite your inner fire → build strength and endurance across mind, body, emotions & energy.</p>
-                <p>Month 3: Restore balance → steady your energy field and quiet the mental noise.</p>
-                <p>Month 4: Clear old stories → create space for new life to flow in.</p>
-                <p>Month 5: Expand your nervous system capacity → hold more joy, love, and life without burning out.</p>
-                <p>Month 6: Align inner and outer worlds → live authentic and free every day.</p>
-              </div>
+              <ul className="font-baskervville text-sm text-left text-[#fffbf5] font-light leading-8 tracking-wider space-y-2">
+                <li>Month 1: Calm scattered energy → soften & stabilise.</li>
+                <li>Month 2: Release what’s stuck → quiet the noise.</li>
+                <li>Month 3: Restore balance → ignite vitality.</li>
+                <li>Month 4: Clear old stories → make space for new.</li>
+                <li>Month 5: Expand capacity → hold more joy & love.</li>
+                <li>Month 6: Embody alignment → live authenticity.</li>
+              </ul>
 
               <div className="flex justify-center lg:justify-start">
                 <button 
                   onClick={openFlodeskForm}
-                  className="bg-transparent border hover:text-white border-[#fffbf5] text-[#fffbf5] px-8 sm:px-16 py-4 mt-8 sm:mt-14 text-sm sm:text-md rounded-md uppercase cursor-pointer"
+                  className="bg-transparent border hover:text-white border-[#ffffff] text-[#ffffff] px-8 sm:px-16 py-4 mt-8 sm:mt-14 text-sm sm:text-md rounded-md uppercase cursor-pointer"
                 >
                   JOIN OUR WAITLIST
                 </button>
@@ -278,6 +284,7 @@ export default function MembershipPage() {
             </div>
           </div>
 
+          {/* Image Content */}
           <div className="relative order-1 lg:order-2 col-span-1">
             <img
               src="/images/membership-maha.jpg"
@@ -285,8 +292,10 @@ export default function MembershipPage() {
               className="w-full h-auto max-h-screen object-contain lg:object-cover"
             />
           </div>
+          
         </div>
       </section>
+
 
 
 
@@ -386,13 +395,14 @@ export default function MembershipPage() {
       {/* Waitlist Bonuses Section */}
       <section className="relative w-full bg-[#b0ad9c]">
         <div className="grid grid-cols-1 lg:grid-cols-3 min-h-screen">
+          
           {/* Left side - Text */}
           <div className="bg-[#b0ad9c] flex justify-center items-center col-span-1 lg:col-span-2 order-2 lg:order-1">
             <div className="max-w-lg px-4 sm:px-8 py-12 lg:py-0">
               <p className="text-sm font-baskervville text-left text-[#fffbf5] tracking-wide">
                 Waitlist bonuses:
               </p>
-              <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 tracking-wide leading-7 spacing-y-4">
+              <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 tracking-wide leading-7 space-y-2 text-[#fffbf5]">
                 <li>Exclusive first access to the MAHA Method before the public.</li>
                 <li>A personal 1:1 onboarding call with Alessandra (Value $250. Not offered again)</li>
                 <li>$100 OFF pricing</li>
@@ -423,8 +433,10 @@ export default function MembershipPage() {
               style={{ transform: "scaleX(-1)" }}
             />
           </div>
+
         </div>
       </section>
+
 
       {/* Waitlist Bonuses Section
       <section className="relative w-full min-h-screen overflow-hidden bg-[#b0ad9c]">
