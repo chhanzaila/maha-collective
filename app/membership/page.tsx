@@ -52,7 +52,7 @@ export default function MembershipPage() {
       )}
 
       {/* Hero Section */}
-      <section className="relative px-4 sm:px-8 md:px-16 lg:px-28 bg-[#d9d6c7] flex flex-col justify-center min-h-[75vh] py-12 lg:py-20">
+      <section className="relative px-4 sm:px-8 md:px-16 lg:px-28 bg-[#d9d6c7] flex flex-col justify-center min-h-[75vh] pt-20 sm:pt-28 lg:pt-36 pb-12 lg:pb-20">
 
         <div className="flex flex-col w-full text-center lg:text-left relative z-10">
           {/* Hero Heading */}
@@ -60,17 +60,20 @@ export default function MembershipPage() {
             MAHA <i>Collective waitlist.</i>
           </h2>
           
-          {/* Hero Tagline */}
-          <h3 className="text-[#fffbf5] text-2xl sm:text-3xl md:text-4xl italic font-baskervville mb-6 sm:mb-8 leading-snug">
+          {/* Hero Tagline (smaller) */}
+          <h3 className="text-[#fffbf5] text-lg sm:text-xl md:text-2xl italic font-baskervville mb-6 sm:mb-8 leading-snug">
             10x the quality of your life and deepen the intimacy of your relationships in only 30 minutes a day.
           </h3>
 
-          {/* Description text */}
-          <p className="text-[#ff4d14] text-[14px] sm:text-[16px] font-light tracking-wide leading-6 mb-10 max-w-full">
-            Learn the 6-month nervous system reset that eases the constant pressure in your body.  <br />
-            The MAHA Method weaves Kriya, Breathwork, Meditation & Movement — for the woman ready to finally feel like herself again.
+          {/* Description text (smaller lines) */}
+          <p className="text-[#ff4d14] text-[12px] sm:text-[13px] font-light tracking-wide leading-5 mb-10 max-w-full">
+            <span className="block mb-1">
+              Learn the 6-month nervous system reset that eases the constant pressure in your body.
+            </span>
+            <span className="block text-[11px] sm:text-[12px]">
+              The MAHA Method weaves Kriya, Breathwork, Meditation & Movement — for the woman ready to finally feel like herself again.
+            </span>
           </p>
-
 
           {/* Centered button */}
           <div className="flex justify-center lg:justify-start mb-16">
@@ -83,12 +86,13 @@ export default function MembershipPage() {
           </div>
         </div>
 
-        {/* Crown Image at bottom-right */}
+        {/* Crown Image moved further inside */}
         <img 
           src="/member-crown.svg" 
           alt="Member Crown" 
-          className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 w-16 sm:w-20 md:w-24 lg:w-28 h-auto z-0"
+          className="absolute bottom-12 right-36 sm:right-36 md:right-40 lg:right-44 w-14 sm:w-18 md:w-20 lg:w-24 h-auto z-0"
         />
+
 
       </section>
 
@@ -96,9 +100,13 @@ export default function MembershipPage() {
 
 
 
+
+
+
+
       {/* Story Section */}
       <section className="relative w-full bg-[#b0ad9c]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           
           {/* Image Content */}
           <div className="relative order-1 lg:order-2 w-full">
@@ -110,17 +118,17 @@ export default function MembershipPage() {
           </div>
 
           {/* Text Content */}
-          <div className="bg-[#b0ad9c] flex justify-start items-start order-2 lg:order-1 py-4 sm:py-6 lg:py-12">
-            <div className="px-4 sm:px-8 lg:pl-16">
-              <h2 className="text-sm font-baskervville text-left text-[#f2ede8] tracking-wider mb-6">
+          <div className="bg-[#b0ad9c] flex items-center order-2 lg:order-1 py-8 sm:py-12 lg:py-20">
+            <div className="px-4 sm:px-8 lg:px-16 max-w-xl mx-auto lg:mx-0">
+              <h2 className="text-base font-baskervville text-left text-[#f2ede8] tracking-wider mb-6">
                 I see you,
               </h2>
               <div className="text-[#f2ede8] font-libre">
-                <p className="font-baskervville text-sm text-left text-[#f2ede8] leading-7 lg:leading-9 tracking-wide mb-4">
-                  On paper, you’re doing everything right.<br/>
+                <p className="font-baskervville text-sm sm:text-base text-left text-[#f2ede8] leading-7 lg:leading-8 tracking-wide mb-6">
+                  On paper, you’re doing everything right.<br />
                   You journal. You meditate. You go to breathwork classes, listen to the podcasts, tick all the boxes. But inside? You feel like a stranger in your own skin.
                 </p>
-                <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 leading-7 tracking-wider space-y-3">
+                <ul className="font-baskervville text-sm sm:text-base text-left font-light list-disc pl-6 lg:pl-8 leading-7 lg:leading-8 tracking-wider space-y-4">
                   <li>You put everyone else first, then collapse into bed wondering why there’s nothing left for you.</li>
                   <li>You smile, you scroll, you say yes when you mean no… and then replay it later, disgusted at yourself for staying silent.</li>
                   <li>You snap at the people you love, then spiral into shame “who even am I anymore?”</li>
@@ -133,6 +141,8 @@ export default function MembershipPage() {
 
         </div>
       </section>
+
+
 
 
 
