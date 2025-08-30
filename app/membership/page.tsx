@@ -51,6 +51,7 @@ export default function MembershipPage() {
         </div>
       )}
 
+
       {/* Hero Section */}
       <section className="relative px-4 sm:px-8 md:px-16 lg:px-28 bg-[#d9d6c7] flex flex-col justify-center min-h-[75vh] pt-20 sm:pt-28 lg:pt-36 pb-12 lg:pb-20">
 
@@ -60,19 +61,16 @@ export default function MembershipPage() {
             MAHA <i>Collective waitlist.</i>
           </h2>
           
-          {/* Hero Tagline (smaller) */}
-          <h3 className="text-[#fffbf5] text-lg sm:text-xl md:text-2xl italic font-baskervville mb-6 sm:mb-8 leading-snug">
+          {/* Hero Tagline (justified, square edges) */}
+          <h3 className="text-[#fffbf5] text-lg sm:text-xl md:text-2xl italic font-baskervville mb-6 sm:mb-8 leading-snug text-justify">
             10x the quality of your life and deepen the intimacy of your relationships in only 30 minutes a day.
           </h3>
 
-          {/* Description text (smaller lines) */}
-          <p className="text-[#ff4d14] text-[12px] sm:text-[13px] font-light tracking-wide leading-5 mb-10 max-w-full">
-            <span className="block mb-1">
-              Learn the 6-month nervous system reset that eases the constant pressure in your body.
-            </span>
-            <span className="block text-[11px] sm:text-[12px]">
-              The MAHA Method weaves Kriya, Breathwork, Meditation & Movement — for the woman ready to finally feel like herself again.
-            </span>
+          {/* Description text (joined + justified + italic ending) */}
+          <p className="text-[#ff4d14] text-[12px] sm:text-[13px] font-light tracking-wide leading-5 mb-10 text-justify">
+            Learn the 6-month nervous system reset that eases the constant pressure in your body. 
+            The MAHA Method weaves Kriya, Breathwork, Meditation & Movement — 
+            <i>for the woman ready to finally feel like herself again.</i>
           </p>
 
           {/* Centered button */}
@@ -86,22 +84,14 @@ export default function MembershipPage() {
           </div>
         </div>
 
-        {/* Crown Image moved further inside */}
+        {/* Crown Image */}
         <img 
           src="/member-crown.svg" 
           alt="Member Crown" 
           className="absolute bottom-12 right-36 sm:right-36 md:right-40 lg:right-44 w-14 sm:w-18 md:w-20 lg:w-24 h-auto z-0"
         />
 
-
       </section>
-
-
-
-
-
-
-
 
 
       {/* Story Section */}
@@ -141,11 +131,6 @@ export default function MembershipPage() {
 
         </div>
       </section>
-
-
-
-
-
 
 
       {/* Reset Section */}
