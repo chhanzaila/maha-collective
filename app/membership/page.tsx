@@ -1,6 +1,5 @@
 "use client"
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Script from "next/script"
 import FlodeskInlineFormNew from "../components/FlodeskInlineFormNew";
 export default function MembershipPage() {
@@ -13,6 +12,41 @@ export default function MembershipPage() {
   const closeFlodeskForm = () => {
     setShowForm(false)
   }
+
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+
+  useEffect(() => {
+  const targetDate = new Date("2025-11-22T23:59:59"); // Target date for countdown
+
+  const interval = setInterval(() => {
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
+
+    if (difference <= 0) {
+      clearInterval(interval);
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((difference / 1000 / 60) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    setTimeLeft({ days, hours, minutes, seconds });
+  }, 1000);
+
+  return () => clearInterval(interval);
+  }, []);
+
+
+
 
   return (
     <div className="flex flex-col min-h-screen font-libre">
@@ -51,7 +85,6 @@ export default function MembershipPage() {
         </div>
       )}
 
-
       {/* Hero Section */}
       <section className="relative px-4 sm:px-8 md:px-16 lg:px-28 bg-[#d9d6c7] flex flex-col justify-center min-h-[75vh] pt-20 sm:pt-28 lg:pt-36 pb-12 lg:pb-20">
 
@@ -68,9 +101,7 @@ export default function MembershipPage() {
 
           {/* Description text (joined + justified + italic ending) */}
           <p className="text-[#ff4d14] text-[12px] sm:text-[13px] font-light tracking-wide leading-5 mb-10 text-justify">
-            Learn the 6-month nervous system reset that eases the constant pressure in your body. 
-            The MAHA Method weaves Kriya, Breathwork, Meditation & Movement — 
-            <i>for the woman ready to finally feel like herself again.</i>
+            This is a 6-month membership to reset your nervous system and release the constant pressure sitting in your body.
           </p>
 
           {/* Centered button */}
@@ -92,6 +123,78 @@ export default function MembershipPage() {
         />
 
       </section>
+
+
+      {/* Counter Section */}
+      <section className="relative px-4 sm:px-8 md:px-16 lg:px-28 bg-[#ff4d14] flex flex-col justify-center min-h-[75vh] pt-20 sm:pt-28 lg:pt-36 pb-12 lg:pb-20">
+
+        <div className="flex flex-col w-full text-center lg:text-left relative z-10">
+
+          {/* Hero Tagline */}
+          <h2 className="text-[#fffbf5] text-[20px] sm:text-[18px] font-light tracking-wide leading-5 mb-10 text-justify">
+            Inside the Membership, you’ll be guided through the MAHA Method — a unique blend of Kriya, Breathwork, Meditation & Movement — created for the woman who is ready to stop living in survival mode and finally feel at home in her skin again.
+          </h2>
+
+          {/* Countdown */}
+          <div className="mb-10">
+            <p className="text-[#fffbf5] text-sm sm:text-base mb-4 font-bold tracking-wide">WAITLIST CLOSES NOVEMBER 22ND</p>
+
+            <div className="flex justify-center lg:justify-start gap-4 text-[#ff4d14]">
+              {/* Days */}
+              <div className="bg-white px-4 sm:px-6 py-3 rounded-lg flex flex-col items-center shadow-lg">
+                <span className="text-2xl sm:text-4xl font-bold transition-transform duration-300 transform hover:scale-105">
+                  {timeLeft.days}
+                </span>
+                <span className="text-xs sm:text-sm font-light mt-1">DAYS</span>
+              </div>
+
+              {/* Hours */}
+              <div className="bg-white px-4 sm:px-6 py-3 rounded-lg flex flex-col items-center shadow-lg">
+                <span className="text-2xl sm:text-4xl font-bold transition-transform duration-300 transform hover:scale-105">
+                  {timeLeft.hours}
+                </span>
+                <span className="text-xs sm:text-sm font-light mt-1">HOURS</span>
+              </div>
+
+              {/* Minutes */}
+              <div className="bg-white px-4 sm:px-6 py-3 rounded-lg flex flex-col items-center shadow-lg">
+                <span className="text-2xl sm:text-4xl font-bold transition-transform duration-300 transform hover:scale-105">
+                  {timeLeft.minutes}
+                </span>
+                <span className="text-xs sm:text-sm font-light mt-1">MINUTES</span>
+              </div>
+
+              {/* Seconds */}
+              <div className="bg-white px-4 sm:px-6 py-3 rounded-lg flex flex-col items-center shadow-lg">
+                <span className="text-2xl sm:text-4xl font-bold transition-transform duration-300 transform hover:scale-105">
+                  {timeLeft.seconds}
+                </span>
+                <span className="text-xs sm:text-sm font-light mt-1">SECONDS</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Join Button */}
+          <div className="flex justify-center lg:justify-start mb-16">
+            <button 
+              onClick={openFlodeskForm}
+              className="bg-[#fffbf5] border border-[#ff4d14] text-[#ff4d14] px-16 py-4 text-sm sm:text-md rounded-md uppercase transition-all duration-300 hover:bg-[#ff4d14] hover:text-white"
+            >
+              JOIN OUR WAITLIST
+            </button>
+          </div>
+        </div>
+
+        {/* Crown Image */}
+        <img 
+          src="/member-crown.svg" 
+          alt="Member Crown" 
+          className="absolute bottom-12 right-36 sm:right-36 md:right-40 lg:right-44 w-14 sm:w-18 md:w-20 lg:w-24 h-auto z-0 brightness-0 invert"
+
+        />
+
+      </section>
+
 
 
       {/* Story Section */}
