@@ -152,48 +152,43 @@ export default function MembershipPage() {
         <div className="flex flex-col w-full text-center lg:text-left relative z-10">
 
           {/* Hero Tagline */}
-          <h2 className="text-[#fffbf5] text-[20px] sm:text-[18px] font-light tracking-wide leading-5 mb-10 text-justify">
+          <h2 className="text-[#fffbf5] text-base sm:text-lg md:text-xl font-light tracking-wide leading-6 mb-8 text-justify">
             Inside the Membership, you’ll be guided through the MAHA Method — a unique blend of Kriya, Breathwork, Meditation & Movement — created for the woman who is ready to stop living in survival mode and finally feel at home in her skin again.
           </h2>
 
           {/* Countdown */}
           <div className="mb-10">
-            <p className="text-[#fffbf5] text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 tracking-wide text-center lg:text-left drop-shadow-md">WAITLIST CLOSES NOVEMBER 22ND</p>
+            <p className="text-[#fffbf5] text-xl sm:text-2xl md:text-3xl font-extrabold mb-6 tracking-wide text-center lg:text-left drop-shadow-md">
+              WAITLIST CLOSES NOVEMBER 22ND
+            </p>
 
-             <div className="flex justify-center lg:justify-start gap-6 text-[#ff4d14]">
-    
+            {/* Mobile: Days on top, rest below */}
+            <div className="flex flex-col items-center lg:items-start gap-4">
+
               {/* Days */}
-              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center shadow-lg">
-                <span className="text-3xl sm:text-5xl font-bold transition-transform duration-300 transform hover:scale-105">
-                  {timeLeft.days}
-                </span>
-                <span className="text-xs sm:text-sm font-light mt-1">DAYS</span>
+              <div className="bg-white px-6 py-4 rounded-lg flex flex-col items-center shadow-lg mb-4 lg:mb-0">
+                <span className="text-[#ff4d14] text-3xl sm:text-5xl font-bold">{timeLeft.days}</span>
+                <span className="text-xs sm:text-sm font-light mt-1 text-[#ff4d14]">DAYS</span>
               </div>
 
-              {/* Hours */}
-              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center shadow-lg">
-                <span className="text-3xl sm:text-5xl font-bold transition-transform duration-300 transform hover:scale-105">
-                  {timeLeft.hours}
-                </span>
-                <span className="text-xs sm:text-sm font-light mt-1">HOURS</span>
+              {/* Hours / Minutes / Seconds */}
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 w-full">
+                {/* Hours */}
+                <div className="bg-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg flex flex-col items-center shadow-lg min-w-[60px]">
+                  <span className="text-[#ff4d14] text-2xl sm:text-4xl md:text-5xl font-bold">{timeLeft.hours}</span>
+                  <span className="text-xs sm:text-sm font-light mt-1 text-[#ff4d14]">HOURS</span>
+                </div>
+                {/* Minutes */}
+                <div className="bg-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg flex flex-col items-center shadow-lg min-w-[60px]">
+                  <span className="text-[#ff4d14] text-2xl sm:text-4xl md:text-5xl font-bold">{timeLeft.minutes}</span>
+                  <span className="text-xs sm:text-sm font-light mt-1 text-[#ff4d14]">MINUTES</span>
+                </div>
+                {/* Seconds */}
+                <div className="bg-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg flex flex-col items-center shadow-lg min-w-[60px]">
+                  <span className="text-[#ff4d14] text-2xl sm:text-4xl md:text-5xl font-bold">{timeLeft.seconds}</span>
+                  <span className="text-xs sm:text-sm font-light mt-1 text-[#ff4d14]">SECONDS</span>
+                </div>
               </div>
-
-              {/* Minutes */}
-              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center shadow-lg">
-                <span className="text-3xl sm:text-5xl font-bold transition-transform duration-300 transform hover:scale-105">
-                  {timeLeft.minutes}
-                </span>
-                <span className="text-xs sm:text-sm font-light mt-1">MINUTES</span>
-              </div>
-
-              {/* Seconds */}
-              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center shadow-lg">
-                <span className="text-3xl sm:text-5xl font-bold transition-transform duration-300 transform hover:scale-105">
-                  {timeLeft.seconds}
-                </span>
-                <span className="text-xs sm:text-sm font-light mt-1">SECONDS</span>
-              </div>
-
             </div>
           </div>
 
@@ -201,7 +196,7 @@ export default function MembershipPage() {
           <div className="flex justify-center lg:justify-start mb-16">
             <button 
               onClick={openFlodeskForm}
-              className="bg-[#fffbf5] border border-[#ff4d14] text-[#ff4d14] px-16 py-4 text-sm sm:text-md rounded-md uppercase transition-all duration-300 hover:bg-[#ff4d14] hover:text-white"
+              className="bg-[#fffbf5] border border-[#ff4d14] text-[#ff4d14] px-12 sm:px-16 py-3 sm:py-4 text-sm sm:text-md rounded-md uppercase transition-all duration-300 hover:bg-[#ff4d14] hover:text-white"
             >
               JOIN OUR WAITLIST
             </button>
@@ -212,12 +207,9 @@ export default function MembershipPage() {
         <img 
           src="/member-crown.svg" 
           alt="Member Crown" 
-          className="absolute bottom-12 right-36 sm:right-36 md:right-40 lg:right-44 w-14 sm:w-18 md:w-20 lg:w-24 h-auto z-0 brightness-0 invert"
-
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:bottom-12 sm:right-36 sm:left-auto sm:translate-x-0 w-12 sm:w-14 md:w-20 lg:w-24 h-auto z-0 brightness-0 invert"
         />
-
       </section>
-
 
 
       {/* Story Section */}
