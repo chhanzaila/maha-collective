@@ -76,8 +76,19 @@ export default function MembershipPage() {
       <Head>
       <title>MAHA Collective. Learn the 6 month Nervous system reset</title>
       <meta name="description" content="Join MAHA Collective and experience the 6-month Nervous System Reset through Kriya, Breathwork, Meditation & Movement." />
+
+      {/* Open Graph */}
       <meta property="og:title" content="MAHA Collective. Learn the 6 month Nervous system reset" />
       <meta property="og:description" content="Join MAHA Collective and experience the 6-month Nervous System Reset through Kriya, Breathwork, Meditation & Movement." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.mahacollective.com.au/membership" />
+      <meta property="og:image" content="https://www.mahacollective.com.au/og-image.jpg" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="MAHA Collective. Learn the 6 month Nervous system reset" />
+      <meta name="twitter:description" content="Join MAHA Collective and experience the 6-month Nervous System Reset through Kriya, Breathwork, Meditation & Movement." />
+      <meta name="twitter:image" content="https://www.mahacollective.com.au/og-image.jpg" />
       </Head>
 
       {/* Flodesk Modal */}
@@ -152,27 +163,35 @@ export default function MembershipPage() {
              <div className="flex justify-center lg:justify-start gap-6 text-[#ff4d14]">
     
               {/* Days */}
-              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center transition-transform duration-300 transform hover:scale-105 animate-pulse">
-                <span className="text-3xl sm:text-5xl font-bold">{timeLeft.days}</span>
-                <span className="text-sm sm:text-base font-light">DAYS</span>
+              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center shadow-lg">
+                <span className="text-3xl sm:text-5xl font-bold transition-transform duration-300 transform hover:scale-105">
+                  {timeLeft.days}
+                </span>
+                <span className="text-xs sm:text-sm font-light mt-1">DAYS</span>
               </div>
 
               {/* Hours */}
-              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center transition-transform duration-300 transform hover:scale-105 animate-pulse">
-                <span className="text-3xl sm:text-5xl font-bold">{timeLeft.hours}</span>
-                <span className="text-sm sm:text-base font-light">HOURS</span>
+              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center shadow-lg">
+                <span className="text-3xl sm:text-5xl font-bold transition-transform duration-300 transform hover:scale-105">
+                  {timeLeft.hours}
+                </span>
+                <span className="text-xs sm:text-sm font-light mt-1">HOURS</span>
               </div>
 
               {/* Minutes */}
-              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center transition-transform duration-300 transform hover:scale-105 animate-pulse">
-                <span className="text-3xl sm:text-5xl font-bold">{timeLeft.minutes}</span>
-                <span className="text-sm sm:text-base font-light">MINUTES</span>
+              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center shadow-lg">
+                <span className="text-3xl sm:text-5xl font-bold transition-transform duration-300 transform hover:scale-105">
+                  {timeLeft.minutes}
+                </span>
+                <span className="text-xs sm:text-sm font-light mt-1">MINUTES</span>
               </div>
 
               {/* Seconds */}
-              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center transition-transform duration-300 transform hover:scale-105 animate-pulse">
-                <span className="text-3xl sm:text-5xl font-bold">{timeLeft.seconds}</span>
-                <span className="text-sm sm:text-base font-light">SECONDS</span>
+              <div className="bg-white px-6 sm:px-8 py-4 rounded-lg flex flex-col items-center shadow-lg">
+                <span className="text-3xl sm:text-5xl font-bold transition-transform duration-300 transform hover:scale-105">
+                  {timeLeft.seconds}
+                </span>
+                <span className="text-xs sm:text-sm font-light mt-1">SECONDS</span>
               </div>
 
             </div>
