@@ -194,104 +194,95 @@ export default function MembershipPage() {
       </section>
 
 
+
+ 
+
       {/* Story Section */}
       <section className="relative w-full bg-[#b0ad9c]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3">
           
+          {/* Text Content */}
+          <div className="bg-[#b0ad9c] flex flex-col justify-center items-center order-2 lg:order-1 py-12 sm:py-16 lg:py-24 col-span-1 lg:col-span-2">
+            <div className="px-8 sm:px-12 lg:pl-16 w-full lg:w-auto">
+              
+              <h2 className="text-xl font-baskervville text-left text-[#f2ede8] mb-4 tracking-wider leading-8">
+                I see you.
+              </h2>
+
+              <p className="font-baskervville text-sm sm:text-base text-left text-[#f2ede8] leading-7 lg:leading-8 tracking-wide mb-4">
+                On paper, you’re doing everything <span className="font-bold text-[#5c3d2e]">right.</span>
+              </p>
+
+              <p className="font-baskervville text-sm sm:text-base text-left text-[#f2ede8] leading-7 lg:leading-8 tracking-wide mb-4">
+                You journal. You meditate. You go to breathwork classes, listen to the podcasts, tick all the boxes. But inside?<span className="font-bold text-[#5c3d2e]"> You feel like a stranger in your own skin.</span>
+              </p>
+
+              <ul className="font-baskervville text-sm sm:text-base text-left text-[#f2ede8] font-light leading-8 tracking-wider space-y-2">
+                <li><span className="font-bold text-[#5c3d2e]">You put everyone else first,</span> then collapse into bed wondering why there’s nothing left for you.</li>
+                <li>You smile, you scroll, <span className="font-bold text-[#5c3d2e]">you say yes when you mean no</span> — and then replay it later, disgusted at yourself for staying silent.</li>
+                <li>You snap at the people you love,<span className="font-bold text-[#5c3d2e]"> then spiral into shame</span> — “who even am I anymore?”</li>
+                <li>Life is happening to you. And <span className="font-bold text-[#5c3d2e]">you can’t remember the last time you actually felt alive.</span></li>
+              </ul>
+
+            </div>
+          </div>
+
           {/* Image Content */}
-          <div className="relative order-1 lg:order-2 w-full">
+          <div className="relative order-1 lg:order-2 col-span-1">
             <img
               src="/images/member-aless.jpg"
               alt="Alessandra in a yoga pose on the beach"
-              className="w-full h-64 sm:h-80 md:h-96 lg:h-full object-contain lg:object-cover"
+              className="w-full h-auto max-h-screen object-contain lg:object-cover"
             />
-          </div>
-
-          {/* Text Content */}
-          <div className="bg-[#b0ad9c] flex items-center order-2 lg:order-1 py-8 sm:py-12 lg:py-20">
-            <div className="px-4 sm:px-8 lg:px-16 max-w-xl mx-auto lg:mx-0">
-              <h2 className="text-base font-baskervville text-left text-[#f2ede8] tracking-wider mb-6">
-                I see you,
-              </h2>
-              <div className="text-[#f2ede8] font-libre">
-                <p className="font-baskervville text-sm sm:text-base text-left text-[#f2ede8] leading-7 lg:leading-8 tracking-wide mb-6">
-                  On paper, you’re doing everything right.<br />
-                  You journal. You meditate. You go to breathwork classes, listen to the podcasts, tick all the boxes. But inside? You feel like a stranger in your own skin.
-                </p>
-                <ul className="font-baskervville text-sm sm:text-base text-left font-light list-disc pl-6 lg:pl-8 leading-7 lg:leading-8 tracking-wider space-y-4">
-                  <li>You put everyone else first, then collapse into bed wondering why there’s nothing left for you.</li>
-                  <li>You smile, you scroll, you say yes when you mean no… and then replay it later, disgusted at yourself for staying silent.</li>
-                  <li>You snap at the people you love, then spiral into shame “who even am I anymore?”</li>
-                  <li>Every decision you make gets run by five other people, and still, you doubt your answer.</li>
-                  <li>Life is happening to you. And you can’t remember the last time you actually felt alive.</li>
-                </ul>
-              </div>
-            </div>
           </div>
 
         </div>
       </section>
+
 
 
       {/* Reset Section */}
       <section className="relative px-4 sm:px-8 md:px-16 lg:px-20 bg-[#d9d6c7] flex justify-between items-center min-h-[50vh] py-8 lg:py-0">
         <div className="flex-col w-full">
-          <div className="w-full mx-auto text-left text-[#ff4d14] sm:text-xl md:text-xl lg:text-xl font-libre py-8 lg:py-32">
-            <h2 className="text-[#ff4d14] text-3xl">
-              MAHA is the <i>reset</i> your body’s been begging for.<br/>The kind that doesn’t just quiet the noise, it clears the <i>whole</i> system.
+          <div className="w-full mx-auto text-left text-[#ff4d14] sm:text-lg md:text-lg lg:text-lg font-libre py-8 lg:py-32">
+            <h2 className="text-[#ff4d14] text-2xl">
+              MAHA Collective Membership is the <span className="italic">reset</span> your body’s been begging for.
+              <br />
+              The <span className="italic">whole</span> reset that doesn’t just quiet the noise, it resets your nervous system.
             </h2>
-          </div>
-        </div>
-      </section>      
-
-      {/* 6-Month Benefits Section */}
-      <section className="relative px-4 sm:px-8 md:px-16 lg:px-20 bg-[#b0ad9c] flex justify-between items-center min-h-[50vh] py-8 lg:py-0">
-        <div className="flex-col w-full">
-          <div className="w-full mx-auto text-left text-[#f2ede8] sm:text-xl md:text-xl lg:text-xl font-libre py-8 lg:py-32">
-            <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center mb-8 lg:mb-12">
-              <h2 className="mb-1">What MAHA will do for you in 6 months:</h2>
-            </div>
-            <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 leading-7 tracking-wider">
-              <li>You will be able to fall asleep the second your head hits the pillow. No 2am spirals, no overthinking that one text, no waking up in a panic because your nervous system is fried.</li>
-              <li>You will learn to move with a quiet confidence that others can feel. No need to prove anything or perform.</li>
-              <li>You will finally feel held, not by a person, but by something bigger. Like the universe has your back, and you can breathe again without waiting for the next shoe to drop.</li>
-              <li>You will be able to say what you actually mean in the moment, and don’t rehash it later wondering if you were too blunt or too emotional or too much.</li>
-              <li>You will be able to say yes and feel it in your body. Say no and still sleep like a baby. </li>
-              <li>You will be able to stop polling five people before making a decision. You ask you. And for the first time in a long time, you actually trust the answer.</li>
-            </ul>
           </div>
         </div>
       </section>
 
-
-
+      
+   
 
       {/* Daily System Section */}
-      <section className="relative w-full bg-[#d9d6c7]">
+      <section className="relative w-full bg-[#b0ad9c]">
         <div className="grid grid-cols-1 lg:grid-cols-3">
           
           {/* Text Content */}
-          <div className="bg-[#d9d6c7] flex flex-col justify-center items-center order-2 lg:order-1 py-12 sm:py-16 lg:py-24 col-span-1 lg:col-span-2">
+          <div className="bg-[#b0ad9c] flex flex-col justify-center items-center order-2 lg:order-1 py-12 sm:py-16 lg:py-24 col-span-1 lg:col-span-2">
             <div className="px-8 sm:px-12 lg:pl-16 w-full lg:w-auto">
-              <h2 className="text-xl font-baskervville text-left text-[#ff4d14] mb-2 tracking-wider leading-8">
-                A proven daily system of Kriya, Breathwork, Movement & Meditation to help you feel like <i>you</i> again.
+              <h2 className="text-xl font-baskervville text-left text-[#f2ede8] mb-2 tracking-wider leading-8">
+                A 6 month daily system of Kriya, Breathwork, Movement & Meditation to 10x the quality of your life & deepen the intimacy of your relationships.
               </h2>
-              <p className="font-baskervville text-sm text-left text-[#ff4d14] mb-4 leading-7 tracking-wide mt-6">
-                MAHA 21 has been carefully designed to:
+              <p className="font-baskervville text-sm text-left text-[#f2ede8] mb-4 leading-7 tracking-wide mt-6">
+                The Road Back to You:
               </p>
-              <ul className="font-baskervville text-sm text-left text-[#ff4d14] font-light leading-8 tracking-wider space-y-2">
-                <li>Month 1: Calm scattered energy → soften & stabilise.</li>
-                <li>Month 2: Release what’s stuck → quiet the noise.</li>
-                <li>Month 3: Restore balance → ignite vitality.</li>
-                <li>Month 4: Clear old stories → make space for new.</li>
-                <li>Month 5: Expand capacity → hold more joy & love.</li>
-                <li>Month 6: Embody alignment → live authenticity.</li>
+              <ul className="font-baskervville text-sm text-left text-[#f2ede8] font-light leading-8 tracking-wider space-y-2">
+                <li>Month 1: Safety: From survival to rest & digest.</li>
+                <li>Month 2: Cleanse: From heaviness to lightness.</li>
+                <li>Month 3: Release: From old stories to new possibilities.</li>
+                <li>Month 4: Expand: From control to trust & flow.</li>
+                <li>Month 5: Soften: From self-protection to connection (with self & others).</li>
+                <li>Month 6: Authenticity: From silence to speaking your truth.</li>
               </ul>
 
               <div className="flex justify-center lg:justify-start">
                 <button 
                   onClick={openFlodeskForm}
-                  className="bg-transparent border hover:text-white border-[#ff4d14] text-[#ff4d14] px-8 sm:px-16 py-4 mt-8 sm:mt-14 text-sm sm:text-md rounded-md uppercase cursor-pointer"
+                  className="bg-[#b0ad9c] border hover:text-white border-[#f2ede8] text-[#f2ede8] px-8 sm:px-16 py-4 mt-8 sm:mt-14 text-sm sm:text-md rounded-md uppercase cursor-pointer"
                 >
                   JOIN OUR WAITLIST
                 </button>
@@ -312,18 +303,46 @@ export default function MembershipPage() {
       </section>
 
 
+      
+
+
+      {/* 6-Month Benefits Section }
+      <section className="relative px-4 sm:px-8 md:px-16 lg:px-20 bg-[#b0ad9c] flex justify-between items-center min-h-[50vh] py-8 lg:py-0">
+        <div className="flex-col w-full">
+          <div className="w-full mx-auto text-left text-[#f2ede8] sm:text-xl md:text-xl lg:text-xl font-libre py-8 lg:py-32">
+            <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center mb-8 lg:mb-12">
+              <h2 className="mb-1">What MAHA will do for you in 6 months:</h2>
+            </div>
+            <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 leading-7 tracking-wider">
+              <li>You will be able to fall asleep the second your head hits the pillow. No 2am spirals, no overthinking that one text, no waking up in a panic because your nervous system is fried.</li>
+              <li>You will learn to move with a quiet confidence that others can feel. No need to prove anything or perform.</li>
+              <li>You will finally feel held, not by a person, but by something bigger. Like the universe has your back, and you can breathe again without waiting for the next shoe to drop.</li>
+              <li>You will be able to say what you actually mean in the moment, and don’t rehash it later wondering if you were too blunt or too emotional or too much.</li>
+              <li>You will be able to say yes and feel it in your body. Say no and still sleep like a baby. </li>
+              <li>You will be able to stop polling five people before making a decision. You ask you. And for the first time in a long time, you actually trust the answer.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+
 
       {/* 6 Month Benefits Section */}
-      <section className="relative w-full bg-[#b0ad9c]">
+      {/* 6 Month Benefits Section */}
+      <section className="relative w-full bg-[#d9d6c7]">
         <div className="grid grid-cols-1 lg:grid-cols-3 min-h-screen">
+          
           {/* Right side - Text */}
-          <div className="bg-[#b0ad9c] text-[#fffbf5] py-24 flex justify-center items-center col-span-1 lg:col-span-2 order-2 lg:order-2">
-            <div className="max-w-lg px-4 sm:px-8 py-8 lg:py-0">
-              <h2 className="text-sm text-[#fffbf5] font-baskervville text-left font-bold leading-8 lg:leading-10 mb-4 tracking-wide">
+          <div className="bg-[#d9d6c7] text-[#ff4d14] py-24 flex justify-center items-center col-span-1 lg:col-span-2 order-2 lg:order-2">
+            <div className="w-full px-6 sm:px-12 py-8 lg:py-0">
+              <h2 className="text-sm font-baskervville text-left font-bold leading-8 lg:leading-10 mb-4 tracking-wide text-justify">
                 What is included in the 6 Month MAHA Membership?
               </h2>
 
-              <div className="text-[#fffbf5]">
+              <div className="text-[#ff4d14] text-justify">
                 <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 tracking-wide spacing-y-4">
                   <li className="mb-4">
                     <b>MAHA 21:</b> Your daily 30 minute practise of Kriya, Breathwork, Movement & Meditation. Each 21 day journey is themed (Soften, Courage, Sleep) so instead of guessing what you need, you get to meet yourself exactly where you are.
@@ -345,6 +364,15 @@ export default function MembershipPage() {
                   </li>
                 </ul>
               </div>
+
+              <div className="flex justify-start mt-8">
+                <button
+                  onClick={openFlodeskForm}
+                  className="bg-[#d9d6c7] border border-[#ff4d14] text-[#ff4d14] px-16 py-4 text-sm sm:text-md rounded-md uppercase cursor-pointer"
+                >
+                  JOIN OUR WAITLIST
+                </button>
+              </div>
             </div>
           </div>
 
@@ -361,40 +389,68 @@ export default function MembershipPage() {
 
 
 
+      {/* 6-Month task done*/}
+      <section className="relative px-4 sm:px-8 md:px-16 lg:px-20 bg-[#b0ad9c] flex justify-between items-center min-h-[50vh] py-8 lg:py-0">
+        <div className="flex-col w-full">
+          <div className="w-full mx-auto text-left text-[#f2ede8] sm:text-lg md:text-lg lg:text-lg font-baskervville py-8 lg:py-32">
+            
+            <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center mb-8 lg:mb-12">
+              <h2 className="mb-1 text-xl sm:text-2xl lg:text-3xl font-baskervville">
+                What you will achieve in 6 months.  
+              </h2>
+            </div>
+
+            <ul className="font-baskervville text-sm sm:text-base text-left font-light list-disc pl-6 lg:pl-8 leading-7 tracking-wider text-justify">
+              <li>Move with a quiet confidence that others can feel — <span className="font-bold text-[#5c3d2e]">no proving, no performing.</span></li>
+              <li>Feel held by something bigger, <span className="font-bold text-[#5c3d2e]">like the universe has your back,</span> so you can finally exhale without waiting for the next shoe to drop.</li>
+              <li><span className="font-bold text-[#5c3d2e]">Say what you mean in the moment</span> — without replaying it later or doubting if you were “too much.”</li>
+              <li>Fall asleep the moment your head hits the pillow — <span className="font-bold text-[#5c3d2e]">no 2am spirals, no anxious overthinking, no waking up in panic.</span></li>
+              </ul>
+
+            
+
+          </div>
+        </div>
+      </section>
+
+
       {/* Waitlist Bonuses Section */}
       <section className="relative w-full bg-[#d9d6c7]">
         <div className="grid grid-cols-1 lg:grid-cols-3 min-h-screen">
           
-          {/* Left side - Text */}
-          <div className="bg-[#d9d6c7] flex justify-center items-center col-span-1 lg:col-span-2 order-2 lg:order-1">
-            <div className="max-w-lg px-4 sm:px-8 py-12 lg:py-0">
-              <p className="text-sm font-baskervville text-left text-[#ff4d14] tracking-wide">
+          {/* Text Content */}
+          <div className="bg-[#d9d6c7] flex flex-col justify-center items-center order-2 lg:order-1 col-span-1 lg:col-span-2 py-12 sm:py-16 lg:py-24">
+            <div className="px-8 sm:px-12 lg:pl-16 w-full lg:w-auto max-w-lg">
+              
+              <p className="text-sm font-baskervville text-left text-[#ff4d14] tracking-wide mb-4">
                 Waitlist bonuses:
               </p>
-              <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 tracking-wide leading-7 space-y-2 text-[#ff4d14]">
+
+              <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 tracking-wide leading-8 space-y-2 text-[#ff4d14]">
                 <li>Exclusive first access to the MAHA Method before the public.</li>
                 <li>A personal 1:1 onboarding call with Alessandra (Value $250. Not offered again)</li>
                 <li>$100 OFF pricing</li>
                 <li>Maha Alumni Status (30 spots only)</li>
               </ul>
 
-              <p className="text-sm font-baskervville text-left italic text-[#ff4d14] mb-2 tracking-wide mt-4">
+              <p className="text-sm font-baskervville text-left italic text-[#ff4d14] mb-6 mt-4 tracking-wide">
                 10X the quality of your life. Join our waitlist today.
               </p>
 
-              <div className="flex justify-center">
+              <div className="flex justify-center lg:justify-start">
                 <button
                   onClick={openFlodeskForm}
-                  className="bg-transparent border hover:text-white border-[#ff4d14] text-[#ff4d14] px-16 py-4 mt-12 text-sm sm:text-md rounded-md uppercase cursor-pointer"
+                  className="bg-[#d9d6c7] border hover:text-white border-[#ff4d14] text-[#ff4d14] px-8 sm:px-16 py-4 mt-8 sm:mt-14 text-sm sm:text-md rounded-md uppercase cursor-pointer"
                 >
                   JOIN OUR WAITLIST
                 </button>
               </div>
+
             </div>
           </div>
 
-          {/* Right side - Image */}
-          <div className="relative w-full h-screen lg:h-full col-span-1 order-1 lg:order-2">
+          {/* Image Content */}
+          <div className="relative order-1 lg:order-2 col-span-1 w-full h-screen lg:h-full">
             <img
               src="/images/membership-form.jpg"
               alt="Alessandra in a yoga pose on the beach"
