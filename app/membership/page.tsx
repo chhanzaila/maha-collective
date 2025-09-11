@@ -195,30 +195,27 @@ export default function MembershipPage() {
       </section>
 
 
-
- 
-
       {/* Story Section */}
       <section className="relative w-full bg-[#b0ad9c]">
         <div className="grid grid-cols-1 lg:grid-cols-3">
-          
+
           {/* Text Content */}
           <div className="bg-[#b0ad9c] flex flex-col justify-center items-center order-2 lg:order-1 py-12 sm:py-16 lg:py-24 col-span-1 lg:col-span-2">
             <div className="px-8 sm:px-12 lg:pl-16 w-full lg:w-auto">
-              
-              <h2 className="text-xl font-baskervville text-left text-[#f2ede8] mb-4 tracking-wider leading-8">
+
+              <h2 className="text-xl font-baskervville text-justify text-[#f2ede8] mb-4 tracking-wider leading-8">
                 I see you.
               </h2>
 
-              <p className="font-baskervville text-sm sm:text-base text-left text-[#f2ede8] leading-7 lg:leading-8 tracking-wide mb-4">
+              <p className="font-baskervville text-sm sm:text-base text-justify text-[#f2ede8] leading-7 lg:leading-8 tracking-wide mb-4">
                 On paper, you’re doing everything <span className="font-bold text-[#5c3d2e]">right.</span>
               </p>
 
-              <p className="font-baskervville text-sm sm:text-base text-left text-[#f2ede8] leading-7 lg:leading-8 tracking-wide mb-4">
+              <p className="font-baskervville text-sm sm:text-base text-justify text-[#f2ede8] leading-7 lg:leading-8 tracking-wide mb-4">
                 You journal. You meditate. You go to breathwork classes, listen to the podcasts, tick all the boxes. But inside?<span className="font-bold text-[#5c3d2e]"> You feel like a stranger in your own skin.</span>
               </p>
 
-              <ul className="font-baskervville text-sm sm:text-base text-left text-[#f2ede8] font-light leading-8 tracking-wider space-y-2">
+              <ul className="font-baskervville text-sm sm:text-base text-justify text-[#f2ede8] font-light leading-8 tracking-wider list-disc pl-6 space-y-2">
                 <li><span className="font-bold text-[#5c3d2e]">You put everyone else first,</span> then collapse into bed wondering why there’s nothing left for you.</li>
                 <li>You smile, you scroll, <span className="font-bold text-[#5c3d2e]">you say yes when you mean no</span> — and then replay it later, disgusted at yourself for staying silent.</li>
                 <li>You snap at the people you love,<span className="font-bold text-[#5c3d2e]"> then spiral into shame</span> — “who even am I anymore?”</li>
@@ -239,7 +236,6 @@ export default function MembershipPage() {
 
         </div>
       </section>
-
 
 
       {/* Reset Section */}
