@@ -91,6 +91,7 @@ export default function MembershipPage() {
       <meta name="twitter:image" content="https://www.mahacollective.com.au/og-image.jpg" />
       </Head>
 
+
       {/* Flodesk Modal */}
       {showForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">

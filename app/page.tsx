@@ -1,7 +1,8 @@
 "use client"
-
+import Head from "next/head";
+import { useState, useEffect } from "react"
+import Script from "next/script"
 import type React from "react"
-import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
@@ -35,6 +36,25 @@ export default function Home() {
             className="absolute bottom-1/3 right-1/3 w-16 h-16 rounded-full bg-sun/10 animate-float"
             style={{ animationDelay: "2s" }}
           ></div> */}
+
+
+                <Head>
+      <title>MAHA Collective. Learn the 6 month Nervous system reset</title>
+      <meta name="description" content="Join MAHA Collective and experience the 6-month Nervous System Reset through Kriya, Breathwork, Meditation & Movement." />
+
+      {/* Open Graph */}
+      <meta property="og:title" content="MAHA Collective. Learn the 6 month Nervous system reset" />
+      <meta property="og:description" content="Join MAHA Collective and experience the 6-month Nervous System Reset through Kriya, Breathwork, Meditation & Movement." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.mahacollective.com.au/membership" />
+      <meta property="og:image" content="https://www.mahacollective.com.au/og-image.jpg" />
+
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="MAHA Collective. Learn the 6 month Nervous system reset" />
+      <meta name="twitter:description" content="Join MAHA Collective and experience the 6-month Nervous System Reset through Kriya, Breathwork, Meditation & Movement." />
+      <meta name="twitter:image" content="https://www.mahacollective.com.au/og-image.jpg" />
+      </Head>
 
   <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
