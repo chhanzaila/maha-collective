@@ -340,26 +340,27 @@ export default function MembershipPage() {
               </h2>
 
               <div className="text-[#ff4d14] text-justify">
-                <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 tracking-wide spacing-y-4">
+                <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 tracking-wide">
                   <li className="mb-4">
-                    <b>MAHA 21:</b> MAHA 21: Your daily 30 minute practise of Kriya, Breathwork, Movement & Meditation.
+                    <span className="font-bold text-sm">MAHA 21:</span> Your daily 30 minute practise of Kriya, Breathwork, Movement & Meditation.
                   </li>
                   <li className="mb-4">
-                    <b>RITUAL LIBRARY:</b> This is your library to help your shift state in 1-5 minutes.
+                    <span className="font-bold text-sm">RITUAL LIBRARY:</span> This is your library to help your shift state in 1-5 minutes.
                   </li>
                   <li className="mb-4">
-                    <b>SELF PACED MASTERCLASSES:</b> Easy to digest teachings on Fear, Identity & Self Love.
+                    <span className="font-bold text-sm">SELF PACED MASTERCLASSES:</span> Easy to digest teachings on Fear, Identity & Self Love.
                   </li>
                   <li className="mb-4">
-                    <b>MAHA COMMUNITY:</b> A space with real connection with souls who just get it, and you.
+                    <span className="font-bold text-sm">MAHA COMMUNITY:</span> A space with real connection with souls who just get it, and you.
                   </li>
                   <li className="mb-4">
-                    <b>MONTHLY LIVE CALLS:</b> Coaching calls with the community for Q&A and integration.
+                    <span className="font-bold text-sm">MONTHLY LIVE CALLS:</span> Coaching calls with the community for Q&A and integration.
                   </li>
                   <li className="mb-4">
-                    <b>50% OFF ALL EVENTS:</b> Pop-ups, immersions, ceremonies, always get the best pricing, first access.
+                    <span className="font-bold text-sm">50% OFF ALL EVENTS:</span> Pop-ups, immersions, ceremonies, always get the best pricing, first access.
                   </li>
                 </ul>
+
               </div>
 
               <div className="flex justify-start mt-8">
@@ -417,20 +418,20 @@ export default function MembershipPage() {
           
           {/* Text Content */}
           <div className="bg-[#d9d6c7] flex flex-col justify-center items-center order-2 lg:order-1 col-span-1 lg:col-span-2 py-12 sm:py-16 lg:py-24">
-            <div className="px-8 sm:px-12 lg:pl-16 w-full lg:w-auto max-w-lg">
+            <div className="px-8 sm:px-12 lg:pl-16 w-full lg:w-auto">
               
-              <p className="text-sm font-baskervville text-left text-[#ff4d14] tracking-wide mb-4">
-                Waitlist bonuses:
-              </p>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-baskervville font-bold text-left text-[#ff4d14] tracking-wide leading-snug mb-8">
+                Waitlist Alumni will receive:
+              </h2>
 
-              <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 tracking-wide leading-8 space-y-2 text-[#ff4d14]">
+              <ul className="font-baskervville text-sm sm:text-base text-left font-light list-disc pl-6 lg:pl-8 tracking-wide leading-8 space-y-2 text-[#ff4d14]">
                 <li>Exclusive first access to the MAHA Method before the public.</li>
                 <li>A personal 1:1 onboarding call with Alessandra (Value $250. Not offered again)</li>
                 <li>$100 OFF pricing</li>
                 <li>Maha Alumni Status (30 spots only)</li>
               </ul>
 
-              <p className="text-sm font-baskervville text-left italic text-[#ff4d14] mb-6 mt-4 tracking-wide">
+              <p className="text-sm font-baskervville text-left italic text-[#ff4d14] mb-6 mt-6 tracking-wide">
                 10X the quality of your life. Join our waitlist today.
               </p>
 
@@ -458,6 +459,7 @@ export default function MembershipPage() {
 
         </div>
       </section>
+
 
 
 
