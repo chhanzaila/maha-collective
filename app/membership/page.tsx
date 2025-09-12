@@ -342,19 +342,19 @@ export default function MembershipPage() {
               <div className="text-[#ff4d14] text-justify">
                 <ul className="font-baskervville text-sm text-left font-light list-disc pl-6 lg:pl-8 tracking-wide spacing-y-4">
                   <li className="mb-4">
-                    <b>MAHA 21:</b> Your daily 30 minute practise of Kriya, Breathwork, Movement & Meditation. Each 21 day journey is themed (Soften, Courage, Sleep) so instead of guessing what you need, you get to meet yourself exactly where you are.
+                    <b>MAHA 21:</b> MAHA 21: Your daily 30 minute practise of Kriya, Breathwork, Movement & Meditation.
                   </li>
                   <li className="mb-4">
-                    <b>RITUAL LIBRARY:</b> Breathwork, kriya, somatics, meditation that shift your state in minutes.
+                    <b>RITUAL LIBRARY:</b> This is your library to help your shift state in 1-5 minutes.
                   </li>
                   <li className="mb-4">
-                    <b>SELF PACED MASTERCLASSES:</b> Deep, accessible teachings on Self-worth, Identity, Love, Abundance taught through a yogic lens.
+                    <b>SELF PACED MASTERCLASSES:</b> Easy to digest teachings on Fear, Identity & Self Love.
                   </li>
                   <li className="mb-4">
                     <b>MAHA COMMUNITY:</b> A space with real connection with souls who just get it, and you.
                   </li>
                   <li className="mb-4">
-                    <b>MONTHLY LIVE CALLS:</b> Embodied coaching, integration, and community space to anchor your practice.
+                    <b>MONTHLY LIVE CALLS:</b> Coaching calls with the community for Q&A and integration.
                   </li>
                   <li className="mb-4">
                     <b>50% OFF ALL EVENTS:</b> Pop-ups, immersions, ceremonies, always get the best pricing, first access.
