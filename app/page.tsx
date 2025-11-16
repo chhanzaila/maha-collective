@@ -1,5 +1,6 @@
 "use client"
 import Head from "next/head";
+import FlodeskInlineFormNew from "./components/FlodeskInlineFormNew";
 import { useState, useEffect } from "react"
 import Script from "next/script"
 import type React from "react"
@@ -11,6 +12,17 @@ import SocialMediaSection from "./components/SocialMediaSection"
 import TestimonialsSection from "./components/TestimonialsSection"
 
 export default function Home() {
+
+  const [showForm, setShowForm] = useState(false)
+
+  const openFlodeskForm = () => {
+    setShowForm(true)
+  }
+
+  const closeFlodeskForm = () => {
+    setShowForm(false)
+  }
+
   const [openMahaDropdown, setOpenMahaDropdown] = useState<number | null>(null)
   const [openIWantToDropdown, setOpenIWantToDropdown] = useState<boolean>(false)
 
@@ -22,8 +34,30 @@ export default function Home() {
   }
 
   return (
+
+    
     <div className="flex flex-col min-h-screen font-libre">
       <Navbar />
+      
+
+      {/* Flodesk Scripts */}
+      <Script
+        id="flodesk-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(w, d, t, h, s, n) {
+              w.FlodeskObject = n;
+              var fn = function() { (w[n].q = w[n].q || []).push(arguments); };
+              w[n] = w[n] || fn;
+              var f = d.getElementsByTagName(t)[0];
+              var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+              var sm = d.createElement(t); sm.async = true; sm.type='module'; sm.src=h+s+'.mjs'+v; f.parentNode.insertBefore(sm, f);
+              var sn = d.createElement(t); sn.async=true; sn.noModule=true; sn.src=h+s+'.js'+v; f.parentNode.insertBefore(sn, f);
+            })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+          `,
+          }}
+        />
 
       {/* Hero Content */}
       <header className="relative min-h-screen flex flex-col">
@@ -56,6 +90,21 @@ export default function Home() {
       <meta name="twitter:image" content="https://www.mahacollective.com.au/og-image.jpg" />
       </Head>
 
+      {/* Flodesk Modal */}
+      {showForm && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-8 rounded-lg max-w-lg w-full relative">
+            <button
+              onClick={closeFlodeskForm}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            >
+              ✕
+            </button>
+            <FlodeskInlineFormNew />
+          </div>
+        </div>
+      )}
+
   <div className="absolute inset-0 w-full h-full overflow-hidden">
           <video
             autoPlay
@@ -73,9 +122,27 @@ export default function Home() {
 
           {/* Hero Text */}
           <div className="relative z-10 text-center mt-24 px-4 mb-16">
-            <h1 className="text-2xl md:text-2xl font-baskervville italic text-white mb-6">By Alessandra</h1>
-            <h1 className="text-4xl md:text-5xl font-baskervville font-normal text-white mb-6">Welcome to<br/> MAHA Collective</h1>
+            <h1 
+              className="text-[#d7e4e8] font-baskervville text-5xl md:text-6xl font-normal mb-4"
+            >
+              MAHA Collective Membership
+            </h1>
+
+            <h2 
+              className="text-white font-baskervville text-xl md:text-2xl font-normal mb-3"
+            >
+              Reset your nervous system in 30 minutes per day.
+            </h2>
+
+            <p 
+              className="text-[#d7e4e8] font-baskervville text-sm md:text-base leading-relaxed max-w-xl mx-auto"
+            >
+              The membership that will teach you how to 10x the quality of your life & deepen 
+              the intimacy of your relationships.
+            </p>
           </div>
+
+
 
           {/* Scroll Down Indicator */}
           {/* <div className="scroll-indicator" onClick={scrollToPath}>
@@ -98,7 +165,111 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative px-28 bg-[#d8d6c7] flex flex-col justify-center h-[75vh]">
+      {/* MAHA Membership Section */}
+      <section className="relative w-full bg-[#e4e0d8]">
+
+        {/* Full-width top heading section */}
+        <div className="w-full bg-[#e4e0d8] py-12 px-6 lg:px-16">
+          <h2 className="text-left text-[24px] lg:text-[28px] font-baskervville text-[#d9480f] tracking-[0.5px] leading-snug max-w-7xl mx-auto">
+            The MAHA Membership is for you if...
+          </h2>
+        </div>
+
+        {/* Two-column section using flex for equal height, image on the right */}
+        <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
+
+          {/* Text Box with lighter background (left) */}
+          <div className="lg:w-1/2 bg-[#f1eee7] px-10 py-14 flex flex-col justify-center">
+            <p className="text-[#555] font-baskervville text-[17px] leading-[1.7] mb-6">
+              <span className="font-semibold text-[#d9480f]">You’re a millennial woman endless</span>, scrolling, 9pm binging, or weekly wines to escape the noise inside your head.
+            </p>
+            <p className="text-[#555] font-baskervville text-[17px] leading-[1.7] mb-6">
+              <span className="font-semibold text-[#d9480f]">You’re a corporate woman who is</span> over waking up everyday on autopilot, who is ready to find her spark again.
+            </p>
+            <p className="text-[#555] font-baskervville text-[17px] leading-[1.7] mb-6">
+              <span className="font-semibold text-[#d9480f]">You’re a mother craving freedom from</span> a mind that is everyone else to do with, and longing for the love you once had for yourself. Restless thoughts and looping stories that steal her peace.
+            </p>
+            <p className="text-[#555] font-baskervville text-[17px] leading-[1.7]">
+              <span className="font-semibold text-[#d9480f]">You’re a brand founder desiring genuine</span> connection with other souls walking the same path.
+            </p>
+          </div>
+
+          {/* Image (right) */}
+          <div className="lg:w-1/2 flex-shrink-0">
+            <img
+              src="/images/membership-maha.jpg"
+              alt="Meditation Group"
+              className="w-full h-full object-cover"
+              style={{ maxHeight: '500px' }} // slightly smaller image
+            />
+          </div>
+        </div>
+
+      </section>
+
+      {/* Fall Asleep */}
+      <section className="relative w-full bg-[#e4e0d8]">
+
+          {/* Full-width top heading section */}
+          <div className="w-full bg-[#e4e0d8] py-12 px-6 lg:px-16">
+            <h2 className="text-center lg:text-right text-[20px] lg:text-[24px] font-baskervville text-[#d9480f] tracking-[0.5px] leading-snug max-w-7xl mx-auto">
+              Inside the MAHA Membership you will learn how to...
+            </h2>
+          </div>
+
+        {/* Two-column section using flex for equal height */}
+        <div className="flex flex-col lg:flex-row max-w-7xl mx-auto">
+
+          {/* Image */}
+          <div className="lg:w-1/2 flex-shrink-0">
+            <img
+              src="/images/membership-maha.jpg"
+              alt="Meditation Group"
+              className="w-full h-full object-cover" 
+              style={{ maxHeight: '500px' }} // image slightly smaller
+            />
+          </div>
+
+          {/* Text Box with lighter background */}
+          <div className="lg:w-1/2 bg-[#f1eee7] px-10 py-14 flex flex-col justify-center">
+            <ul className="text-left text-[#555] font-baskervville space-y-6 text-[17px] leading-[1.7]">
+              <li>
+                <span className="font-semibold text-[#d9480f]">Fall asleep within minutes:</span>
+                {" "}End the late-night replay loops, racing thoughts, and “did I forget something?” anxiety.
+              </li>
+              <li>
+                <span className="font-semibold text-[#d9480f]">Set boundaries that actually hold:</span>
+                {" "}Learn how to say no without apologizing, stop rewriting messages ten times, and finally stop faking a smile.
+              </li>
+              <li>
+                <span className="font-semibold text-[#d9480f]">Break the autopilot stress cycle:</span>
+                {" "}Change the daily habits keeping your nervous system fried, so you can feel present and energized again.
+              </li>
+              <li>
+                <span className="font-semibold text-[#d9480f]">Build a life that feels calm, spacious, and yours:</span>
+                {" "}Go from surviving on caffeine and chaos to living with balance and self-trust.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Button below the two-column section, centered */}
+        <div className="mt-10 mb-16 flex justify-center">
+          <button
+            onClick={openFlodeskForm}
+            className="bg-[#d9480f] text-white px-10 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-[#b63605] transition"
+          >
+            Join the MAHA membership
+          </button>
+        </div>
+
+      </section>
+
+
+
+
+
+      {/* <section className="relative px-28 bg-[#d8d6c7] flex flex-col justify-center h-[75vh]">
         <div className="w-full mx-auto text-left text-[#ff4d14] text-5xl font-baskervville py-28">
           <h2 className="mb-1">We don't do 'wellness.'</h2>
           <h2 className="mb-1 mt-4">We do wholeness.</h2> 
@@ -109,7 +280,7 @@ export default function Home() {
             <p>The 'Not Just Yoga' Membership</p>
           </button>
         </div>
-      </section>
+      </section> */}
 
       {/* LIVE MAHA Definition Section */}
       {/* <section className="relative h-screen px-4 bg-[#b0ad9c] flex flex-col justify-start">

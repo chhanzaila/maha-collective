@@ -144,7 +144,6 @@ export default function MembershipPage() {
           className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:bottom-12 sm:right-36 sm:left-auto sm:translate-x-0 w-12 sm:w-14 md:w-20 lg:w-24 h-auto z-0"
          // className="absolute bottom-4 left-1/2 transform -translate-x-1/2 sm:bottom-12 sm:right-36 sm:left-auto sm:translate-x-0 w-12 sm:w-14 md:w-20 lg:w-24 h-auto z-0 brightness-0 invert"
         />
-
       </section>
 
 
@@ -251,7 +250,6 @@ export default function MembershipPage() {
         </div>
       </section>
 
-      
    
 
       {/* Daily System Section */}

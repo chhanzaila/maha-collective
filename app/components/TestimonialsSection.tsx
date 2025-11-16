@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
     <section className="relative bg-[#d8d6c7] min-h-screen py-20 px-8 overflow-hidden">
       {/* Main heading */}
       <h2 className="text-[#ff4d14] text-3xl md:text-5xl font-tan-meringue text-center mb-20">
-        Don't take our word for it...
+        Testimonials
       </h2>
 
       {/* Testimonials Grid */}
