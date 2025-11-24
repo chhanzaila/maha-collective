@@ -104,43 +104,38 @@ export default function Home() {
           </div>
         </div>
       )}
+  
+<header className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+  {/* Background Video */}
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    style={{ objectPosition: "50% 50%" }} // adjust vertical framing
+  >
+    <source src="/images/SOB.mp4" type="video/mp4" />
+  </video>
 
-  <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-          >
-            <source src="https://videos.pexels.com/video-files/2098988/2098988-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-          </video>
-          {/* Dark overlay for better text readability */}
-          {/* <div className="absolute inset-0 bg-[#b0ad9c]/50"></div> */}
-        </div>
+  {/* Hero Text */}
+  <div className="relative z-20 text-center px-4 max-w-4xl">
+    <h1 className="text-[#d7e4e8] font-baskervville text-5xl md:text-6xl font-normal mb-4">
+      MAHA Collective Membership
+    </h1>
+    <h2 className="text-black font-baskervville text-xl md:text-2xl font-normal mb-3">
+      Reset your nervous system in 30 minutes per day.
+    </h2>
+    <p className="text-[#d7e4e8] font-baskervville text-sm md:text-base leading-relaxed max-w-xl mx-auto">
+      The membership that will teach you how to 10x the quality of your life & deepen 
+      the intimacy of your relationships.
+    </p>
+  </div>
+</header>
 
-          {/* Hero Text */}
-          <div className="relative z-10 text-center mt-24 px-4 mb-16">
-            <h1 
-              className="text-[#d7e4e8] font-baskervville text-5xl md:text-6xl font-normal mb-4"
-            >
-              MAHA Collective Membership
-            </h1>
 
-            <h2 
-              className="text-white font-baskervville text-xl md:text-2xl font-normal mb-3"
-            >
-              Reset your nervous system in 30 minutes per day.
-            </h2>
 
-            <p 
-              className="text-[#d7e4e8] font-baskervville text-sm md:text-base leading-relaxed max-w-xl mx-auto"
-            >
-              The membership that will teach you how to 10x the quality of your life & deepen 
-              the intimacy of your relationships.
-            </p>
-          </div>
+
 
 
 
@@ -255,13 +250,14 @@ export default function Home() {
 
         {/* Button below the two-column section, centered */}
         <div className="mt-10 mb-16 flex justify-center">
-          <button
-            onClick={openFlodeskForm}
+          <a
+            href="/subcription"
             className="bg-[#d9480f] text-white px-10 py-4 rounded-full font-semibold uppercase tracking-wide hover:bg-[#b63605] transition"
           >
-            Join the MAHA membership
-          </button>
+            Join the MAHA Subcription
+          </a>
         </div>
+
 
       </section>
 

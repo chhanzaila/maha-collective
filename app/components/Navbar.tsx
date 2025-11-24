@@ -1,17 +1,30 @@
 "use client"
 
 import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
+import { ShoppingCart } from "lucide-react"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
+  // Handle scroll background
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 50)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
   return (
@@ -20,39 +33,117 @@ export default function Navbar() {
         isScrolled ? "bg-light-sage/95 shadow-md" : "bg-light-sage"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-6 py-2">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-6 py-2 relative">
 
         {/* LEFT SIDE — LOGO */}
-        <Link href="/" className="flex items-center group relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-sun/0 via-sun/30 to-sun/0 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+        <Link href="/" className="flex items-center">
           <img
             src="/images/menu-logo.png"
             alt="MAHA Collective"
-            className="h-16 w-auto relative"
+            className="h-16 w-auto"
           />
         </Link>
 
-        {/* RIGHT SIDE — LOGIN / SIGN UP */}
-        <div className="flex items-center space-x-4">
-          <Link
-            href="/login"
-            className="text-soil hover:text-sun transition-all duration-300 font-libre text-xs tracking-wider uppercase px-4 py-2 rounded-md hover:bg-white/20"
+        {/* RIGHT SIDE — Cart Icon */}
+        <div className="relative" ref={dropdownRef}>
+          <button
+            className="p-2 rounded-full hover:bg-white/20 transition duration-300"
+            onClick={() => setDropdownOpen(!dropdownOpen)}
           >
-            Login
-          </Link>
+            <ShoppingCart className="w-6 h-6 text-soil" />
+          </button>
 
-          <Link
-            href="/signup"
-            className="bg-sun text-white font-libre text-xs tracking-wider uppercase px-4 py-2 rounded-md hover:bg-sun/80 transition-all"
-          >
-            Sign Up
-          </Link>
+          {/* Dropdown */}
+          {dropdownOpen && (
+            <div className="absolute right-0 mt-2 w-56 bg-white shadow-lg border border-gray-200 rounded-lg py-2 z-50">
+              <Link
+                href="/login"
+                className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              >
+                Login
+              </Link>
+              <Link
+                href="/signup"
+                className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              >
+                Sign Up
+              </Link>
+              <Link
+                href="/subscription"
+                className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              >
+                Subscription
+              </Link>
+            </div>
+          )}
         </div>
 
       </div>
     </nav>
   )
 }
+
+
+
+
+
+
+
+// "use client"
+
+// import Link from "next/link"
+// import { useState, useEffect } from "react"
+
+// export default function Navbar() {
+//   const [isScrolled, setIsScrolled] = useState(false)
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       setIsScrolled(window.scrollY > 50)
+//     }
+//     window.addEventListener("scroll", handleScroll)
+//     return () => window.removeEventListener("scroll", handleScroll)
+//   }, [])
+
+//   return (
+//     <nav
+//       className={`w-full z-50 transition-all duration-500 ${
+//         isScrolled ? "bg-light-sage/95 shadow-md" : "bg-light-sage"
+//       }`}
+//     >
+//       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 lg:px-6 py-2">
+
+//         {/* LEFT SIDE — LOGO */}
+//         <Link href="/" className="flex items-center group relative">
+//           <div className="absolute -inset-1 bg-gradient-to-r from-sun/0 via-sun/30 to-sun/0 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+//           <img
+//             src="/images/menu-logo.png"
+//             alt="MAHA Collective"
+//             className="h-16 w-auto relative"
+//           />
+//         </Link>
+
+//         {/* RIGHT SIDE — LOGIN / SIGN UP */}
+//         <div className="flex items-center space-x-4">
+//           <Link
+//             href="/login"
+//             className="text-soil hover:text-sun transition-all duration-300 font-libre text-xs tracking-wider uppercase px-4 py-2 rounded-md hover:bg-white/20"
+//           >
+//             Login
+//           </Link>
+
+//           <Link
+//             href="/signup"
+//             className="bg-sun text-white font-libre text-xs tracking-wider uppercase px-4 py-2 rounded-md hover:bg-sun/80 transition-all"
+//           >
+//             Sign Up
+//           </Link>
+//         </div>
+
+//       </div>
+//     </nav>
+//   )
+// }
 
 
 
